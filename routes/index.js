@@ -38,4 +38,25 @@ router.get('/specific/:id', async function (req, res, next) {
   res.render('specific', { movie: movie })
 
 });
+
+router.get('/create-review', async function (req, res, next) {
+
+  res.render('review-form')
+
+});
+
+
+router.post('/submit-review', async function (req, res, next) {
+
+  await Review.create([{ userName:req.body.username, rating:req.body.rating,
+    review:req.body.review
+    }])
+  //  Review is the schema we want to use
+
+  res.redirect('/specific/id');
+})
+
+
+
+
 module.exports = router;
