@@ -5,7 +5,29 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  
+    <nav>
+      <div class="menu-icon">
+         <span class="fas fa-bars"></span>
+      </div>
+      <div class="logo">
+        Anvies
+      </div>
+      <div class="nav-items">
+         <li><a href="#">Movies</a></li>
+         <li><a href="#">TV Shows</a></li>
+         <li><a href="#">Animes</a></li>
+         <li><a href="#">Documentries</a></li>
+         <li><a href="#">Watchlist</a></li>
+      </div>
+      <div class="search-icon">
+         <span class="fas fa-search"></span>
+      </div>
+     
+      <form action="#">
+         <input type="search" class="search-data" placeholder="Search" required>
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+   </nav>
   </body>
 </html>
