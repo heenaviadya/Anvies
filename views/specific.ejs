@@ -1,35 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/specific.css' />
-    <title>Specific Page</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel='stylesheet' href='/stylesheets/specific.css' />
+   <title>Specific Page</title>
 </head>
+
 <body>
-    <nav>
-        <div class="menu-icon">
-           <span class="fas fa-bars"></span>
-        </div>
-        <div class="logo">
-          Anvies
-        </div>
-        <div class="nav-items">
-           <li><a href="#">Movies</a></li>
-           <li><a href="#">TV Shows</a></li>
-           <li><a href="#">Animes</a></li>
-           <li><a href="#">Documentries</a></li>
-           <li><a href="#">Watchlist</a></li>
-        </div>
-        <div class="search-icon">
-           <span class="fas fa-search"></span>
-        </div>
-       
-        <form action="#">
-           <input type="search" class="search-data" placeholder="Search" required>
-           <button type="submit" class="fas fa-search"></button>
-        </form>
-     </nav>
+   <!-- nav bar begins here -->
+   <nav>
+      <div class="menu-icon">
+         <span class="fas fa-bars"></span>
+      </div>
+      <div class="logo">
+         Anvies
+      </div>
+      <div class="nav-items">
+         <li><a href="#">Movies</a></li>
+         <li><a href="#">TV Shows</a></li>
+         <li><a href="#">Animes</a></li>
+         <li><a href="#">Documentries</a></li>
+         <li><a href="#">Watchlist</a></li>
+      </div>
+      <div class="search-icon">
+         <span class="fas fa-search"></span>
+      </div>
+
+      <form action="#">
+         <input type="search" class="search-data" placeholder="Search" required>
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+   </nav>
+   <!-- nav bar ends here -->
+
+
+   <div class="contents">
+      <div class="row"></div>
+
+      <!-- <%%> -->
+      <div class="child"><img src="<%= movie.poster%>" alt=""></div>
+      <div class=" child">
+         <table class="table table-sm" style="margin-bottom: 50px;color:  #FFFCF2;">
+            <tbody>
+               <tr>
+                  <th>Title</th>
+                  <td>
+                     <%= movie.title%>
+                  </td>
+               </tr>
+
+               <tr>
+                  <th>Description</th>
+                  <td>
+                     <%= movie.description%>
+                  </td>
+               </tr>
+
+               <tr>
+                  <th>Genre</th>
+                  <td>
+                     <%= movie.genre%>
+                  </td>
+               </tr>
+
+               <tr>
+                  <th>Release Date</th>
+                  <td>
+                     <%= movie.releaseDate%>
+                  </td>
+               </tr>
+               <tr>
+                  <th>Time-Length</th>
+                  <td>
+                     <%=movie.timeLength %>
+                  </td>
+               </tr>
+
+               <tr>
+                  <th>Cast</th>
+                  <td>
+                     <%= movie.cast %>
+                  </td>
+               </tr>
+
+               <tr>
+                  <th>Ratings</th>
+                  <td>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+
+
+
+      </div>
+      <section>
+         <div class="container my-5 py-5 text-dark">
+            <div class="row d-flex justify-content-start">
+               <div class="col-md-10 col-lg-8 col-xl-6">
+                  <div class="card">
+                     <div class="card-body p-4">
+                        <div class="d-flex flex-start w-100">
+                           <img class="rounded-circle shadow-1-strong me-3"
+                              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp" alt="avatar" width="65"
+                              height="65" />
+                           <div class="w-100">
+                              <h5>Add a comment</h5>
+                              <div class="rating">
+
+                                 <i class="fa-regular fa-star" title="Bad"></i>
+
+
+                                 <i class="fa-regular fa-star" title="Poor"></i>
+
+
+                                 <i class="fa-regular fa-star" title="OK"></i>
+
+
+                                 <i class="fa-regular fa-star" title="Good"></i>
+
+
+                                 <i class="fa-regular fa-star" title="Excellent"></i>
+
+                              </div>
+                              <div class="form-outline">
+                                 <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                                 <label class="form-label" for="textAreaExample">What is your view?</label>
+                              </div>
+                              <div class="d-flex justify-content-between mt-3">
+                                 <button type="button" class="btn btn-primary">Send</button>
+                                 <button type="button" class="btn btn-primary">
+                                    Cancel
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
 </body>
+
 </html>

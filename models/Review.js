@@ -1,8 +1,6 @@
+
 const mongoose = require('mongoose')
-
 const Schema = mongoose.Schema;
-import { v4 } from 'uuid';
-
 
 
 const ReviewSchema = new Schema({
@@ -12,5 +10,5 @@ const ReviewSchema = new Schema({
   movie_Id: String,
 });
 
- module.exports= mongoose.model('Reviews', ReviewSchema);
+module.exports = mongoose.model('Reviews', ReviewSchema);
 

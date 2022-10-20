@@ -2,6 +2,7 @@ body {
     color: #FFFCF2;
     font-family:  "Lato",sans-serif;
     background-color: #343A40;
+
   }
   
   
@@ -12,7 +13,6 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 70px;
-   
     padding: 0 120px;
   }
   nav .logo{
@@ -80,4 +80,25 @@ body {
     display: none;
   }
   
+.contents{ margin: 0px 120px; }
+
   
+  .child {
+    display: inline-block;
+    margin: 36px 0px;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+  .rating {
+    height: 100px;
+ 
+  }
+
+
+
+
+
+
+
+ 

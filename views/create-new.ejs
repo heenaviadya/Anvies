@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/create-new.css' />
-    <title>Create Movie Post</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel='stylesheet' href='/stylesheets/create-new.css' />
+  <title>Create Movie Post</title>
 </head>
+
 <body>
-    <nav>
-        <div class="menu-icon">
-           <span class="fas fa-bars"></span>
-        </div>
-        <div class="logo">
-          Anvies
-        </div>
-        <h4 style="color: #FFFCF2 ;">Admin</h4>
-     </nav>
-     <br>
+  <nav>
+    <div class="menu-icon">
+      <span class="fas fa-bars"></span>
+    </div>
+    <div class="logo">
+      Anvies
+    </div>
+    <h4 style="color: #FFFCF2 ;">Admin</h4>
+  </nav>
+  <br>
 
-   
-     
 
-     <form class="row g-3 ">
+
+  <div class=" contents">
+
+    <form class="row g-3 " action="/submit-movie" method="post">
       <div class="col-md-6">
         <label for="title" class="form-label">Movie Title</label>
-        <input type="text" class="form-control" id="inputText">
+        <input type="text" name="title" class="form-control" id="inputText">
       </div>
       <div class="col-md-6">
         <label for="genre" class="form-label">Genre</label>
-        <input type="text" class="form-control" id="inputGenre">
+        <input type="text" name="genre" class="form-control" id="inputGenre">
       </div>
       <div class="col-12">
         <label for="description" class="form-label">Description</label>
-        <input type="text" class="form-control" id="inputDescription" >
+        <input type="text" name="description" class="form-control" id="inputDescription">
       </div>
       <div class="col-12">
         <label for="cast" class="form-label">Cast</label>
-        <input type="text" class="form-control" id="inputCast" >
+        <input type="text" name="cast" class="form-control" id="inputCast">
       </div>
       <div class="col-md-6">
         <label for="release-date" class="form-label">Release Date</label>
-        <input type="date" class="form-control" id="inputDate">
+        <input type="date" name="releaseDate" class="form-control" id="inputDate">
       </div>
       <div class="col-md-6">
         <label for="time-length" class="form-label">Time Length</label>
-        <input type="text" class="form-control" id="inputTime" >
+        <input type="text" name="timeLength" class="form-control" id="inputTime">
 
         <div class="col-md-6" style="float: left;">
           <label for="poster" class="form-label">Poster</label>
-          <input type="url" class="form-control" id="inputTime">
-        <br>
-      <div class="col-6">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
+          <input type="url" name="poster" class="form-control" id="inputPoster">
+          <br>
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
     </form>
+  </div>
 </body>
+
 </html>
