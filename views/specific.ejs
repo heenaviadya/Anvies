@@ -5,10 +5,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!-- CSS only -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ 
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
    <link rel='stylesheet' href='/stylesheets/specific.css' />
    <title>Specific Page</title>
 </head>
@@ -44,7 +43,7 @@
    <div class="contents">
       <div class="row"></div>
 
-
+     
       <div class="child"><img src="<%= movie.poster%>" alt="" width="320" height="400"></div>
       <div class=" child">
          <table class="table table-sm" style="margin-bottom: 50px;color:  #FFFCF2;">
@@ -99,45 +98,43 @@
          </table>
       </div>
 
+ <h1>User Reviews</h1>
+      <a href="/create-review/<%= movie._id %>" class="btn ">
+    <button >Write a Review</button>
+    </a>
+    
 
-      <h1>User Reviews</h1>
-      <a href="<%=/create-review/${movie_id} %>" class="btn ">
-         <button>Write a Review</button>
-      </a>
-
-
-
+    
       <div class="container my-5 py-5">
-         <div class="row d-flex justify-content-center">
-            <div class="col-md- col-lg-10">
-               <div class="card text-dark">
-                  <% reviewList.forEach((review,review_id)=>{ %>
-                     <div class="card-body p-4">
-
-                        <div class="d-flex flex-start">
-                           <div>
-                              <h6 class="fw-bold mb-1">
-                                 <%= review.username %>
-                              </h6>
-                              <div class="d-flex align-items-center mb-3">
-                                 <p class="mb-0">
-                                    Ratings:<%= review.rating %>
-
-                                 </p>
-
-                              </div>
-                              <p class="mb-0">
-                                 <%= review.review %>
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-
-                     <hr class="my-0" />
-                     <% }) %>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md- col-lg-10">
+            <div class="card text-dark">
+               <% reviewList.forEach((review,review_id)=>{ %>
+              <div class="card-body p-4">
+            
+                <div class="d-flex flex-start">
+                  <div>
+                    <h6 class="fw-bold mb-1"><%= review.userName %></h6>
+                    <div class="d-flex align-items-center mb-3">
+                      <p class="mb-0">
+                       Ratings:<%= review.rating %>
+                      
+                      </p>
+                     
+                    </div>
+                    <p class="mb-0">
+                       <%= review.review %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+    
+              <hr class="my-0" />
+              <% }) %>
 
 
-
+     
+     
 </body>
 
 </html>

@@ -1,5 +1,6 @@
-const uuid = require('uuid')
-const mongoose = require('mongoose')
+
+const mongoose = require('mongoose');
+const { stringify } = require('uuid');
 const Schema = mongoose.Schema;
 
 
@@ -7,8 +8,7 @@ const ReviewSchema = new Schema({
   rating: Number,
   review: String,
   userName: String,
-  movie_id: { type: String },
-  reviewid: { type: String, default: uuid.v4() }
+  movieId: String
 });
 
 module.exports = mongoose.model('Reviews', ReviewSchema);

@@ -42,10 +42,10 @@
  </nav>
  <!-- nav bar ends here -->
 
-    <form class="review" action="/submit-review" method="post">
+    <form class="review" action="/submit-review/<%= movie_id %>" method="post">
         <div class="form-group">
           <label for="exampleFormControlInput1">Username</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" name="username" placeholder="Username here">
+          <input type="text" class="form-control" id="exampleFormControlInput1" name="userName" placeholder="Username here">
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Ratings</label>
