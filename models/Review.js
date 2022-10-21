@@ -7,7 +7,8 @@ const ReviewSchema = new Schema({
   rating: Number,
   review: String,
   userName: String,
-  movie_Id: { type: String, default: uuid.v4() },
+  movie_id: { type: String },
+  reviewid: { type: String, default: uuid.v4() }
 });
 
 module.exports = mongoose.model('Reviews', ReviewSchema);
