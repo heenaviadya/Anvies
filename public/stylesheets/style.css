@@ -2,8 +2,8 @@ body {
   color: #FFFCF2;
   font-family:  "Lato",sans-serif;
   background-color: #343A40;
-}
 
+}
 
 nav{
   background: #4A535B;
@@ -80,20 +80,24 @@ nav .search-icon{
   display: none;
 }
 
-.card{background-color: #1e232b;
-      margin:8px 8px;
-  }
 
 
 .container {
-  max-width: 1335px;
+  max-width: 1440px;
   margin: 36px 120px;
 }
+.card{background-color: #1e232b;
+      margin:8px 40px;
+  }
+
+
+
 .grid-row {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  margin: auto;
+  
+
 }
 
 .grid-item {
@@ -101,19 +105,12 @@ nav .search-icon{
   flex-basis: 20%;
   width: 259px;
   position: relative;
-  padding: 70px;
+  padding: 100px;
   box-sizing: border-box;
 }
 
 
-.grid-item {
-  height: 350px;
-  flex-basis: 20%;
-  width: 259px;
-  position: relative;
-  padding: 10px;
-  box-sizing: border-box;
-}
+
 @media(max-width: 1073px) {
    .grid-item {
     flex-basis: 33.33%;

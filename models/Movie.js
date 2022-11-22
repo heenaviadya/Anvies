@@ -11,6 +11,12 @@ const MovieSchema = new Schema({
   releaseDate: { type: Date },
   timeLength: { type: String },
   poster: { type: String },
+  Review:[
+    {
+       type: mongoose.Schema.Types.ObjectId,
+       ref: "Review"
+    }
+    ]
 
 });
 

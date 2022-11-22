@@ -28,7 +28,7 @@
   <div class="data">
     <div class="row">
       <div class="col-md-6">
-        <h3>Create a New Movie Post</h3>
+        <h3>List Of Movies</h3>
       </div>
       <div class="col-md-6 text-end">
         <a href="/create-m-post" class="btn ">
@@ -39,7 +39,7 @@
 
     </div>
     
-    <table class="table table-sm table-bordered" style="  color: #FFFCF2;">
+    <table class="table table-sm table-bordered" style="  color: #FFFCF2; border-color: #262A2F;">
       <thead>
         <tr>
           <th scope="col">S.N</th>
@@ -58,7 +58,7 @@
               <%= movie.title %>
             </td>
             <td>
-              <%= movie.releaseDate %>
+              <%= movie.releaseDate.toLocaleDateString() %>
             </td>
 
             <td><a href="" class="btn ">Edit</a> </td>

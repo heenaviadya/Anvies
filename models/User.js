@@ -1,13 +1,31 @@
-const uuid = require('uuid')
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const userSchema = mongoose.Schema(
+   {
+     name: {
+       type: String,
+       required: true,
+     },
+     email: {
+       type: String,
+       required: true,
+       unique: true,
+     },
+     password: {
+       type: String,
+       required: true,
+     },
+     isAdmin: {
+       type: Boolean,
+       required: true,
+       default: false,
+     },
+   },
+   {
+     timestamps: true,
+   }
+ )
+ module.exports = mongoose.model('User', userSchema)
 
 
 
-
-const UserSchema = new Schema({
-  userName: String,
-  user_Id: { type: String ,default: uuid.v4() },
-});
-
-module.exports =mongoose.model('Users', UserSchema);
+ 

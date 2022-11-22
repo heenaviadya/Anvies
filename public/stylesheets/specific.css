@@ -90,5 +90,10 @@ body {
     vertical-align: middle;
   }
 
+  .container my-5 py-5{ position:absolute;}
 
+  .review{ margin-left: 120px;
+    margin-bottom: 20px;
+     display: inline-block;
+     }
 
