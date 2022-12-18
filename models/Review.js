@@ -6,14 +6,9 @@ const ReviewSchema = new Schema({
   rating: Number,
   review: String,
   userName: String,
-  Movie: [
-    {
-       type: mongoose.Schema.Types.ObjectId,
-       ref: "Movie"
-    }
-    ]
+  movieId: String
+  
 });
-
 
 
 

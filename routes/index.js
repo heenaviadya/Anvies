@@ -20,7 +20,7 @@ router.get('/create-m-post', function (req, res, next) {
 
 
 router.post('/submit-movie', async function (req, res, next) {
-  
+
 
   await Movie.create([
     {
@@ -33,12 +33,12 @@ router.post('/submit-movie', async function (req, res, next) {
       poster: req.body.poster,
     },
   ]);
- 
+
   //  Movie is the schema we want to use
 
   res.redirect('/');
 })
- 
+
 //Takes you to movies page and displays all the movies
 router.get('/index', async function (req, res, next) {
   const movie = await Movie.find();
@@ -46,24 +46,24 @@ router.get('/index', async function (req, res, next) {
 });
 
 //Takes you to home page
- router.get('/home',async function(req,res,next){
+router.get('/home', async function (req, res, next) {
   res.render('home');
- });
+});
 
 
 
- //takes you to specific movie detail page 
+//takes you to specific movie detail page 
 router.get('/specific/:id', async function (req, res, next) {
- 
- const movie = await Movie.findOne({_id: req.params.id})
-  const review = await Review.find({movieId: req.params.id} ) 
+
+  const movie = await Movie.findOne({ _id: req.params.id })
+  const review = await Review.find({ movieId: req.params.id })
   var total = 0;
-           for(var i = 0; i < review.length; i++) {
-               total += review[i].rating;
-           }
-           var avg = total / review.length;
-  res.render('specific',{movie:movie,reviewList : review, avgrating:avg})
- 
+  for (var i = 0; i < review.length; i++) {
+    total += review[i].rating;
+  }
+  var avg = total / review.length;
+  res.render('specific', { movie: movie, reviewList: review, avgrating: avg })
+
 });
 
 
@@ -74,9 +74,9 @@ router.get('/create-review/:id', async function (req, res, next) {
 });
 
 //for submiting review
-router.post('/submit-review/:id', async function(req,res,next){
+router.post('/submit-review/:id', async function (req, res, next) {
   movie = req.params.id;
-  await Review.insertMany([{userName: req.body.userName, rating: req.body.rating,review:req.body.review, movieId: movie}])
+  await Review.insertMany([{ userName: req.body.userName, rating: req.body.rating, review: req.body.review, movieId: movie }])
   res.redirect('/index');
 })
 
